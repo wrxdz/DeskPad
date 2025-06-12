@@ -9,8 +9,8 @@ private let sideEffects: [SideEffect] = [
 ]
 
 let sideEffectsMiddleware: Middleware<AppState> = { dispatch, getState in
-    { originalDispatch in
-        { action in
+    return { originalDispatch in
+        return { action in
             originalDispatch(action)
             for sideEffect in sideEffects {
                 sideEffect(action, dispatch, getState)

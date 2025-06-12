@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				6D2F1487280C20D000A3A2E5 /* AppState.swift */,
-				6D2F1488280C20D000A3A2E5 /* SideEffectsMiddleware.swift */,
 				6D2F1489280C20D000A3A2E5 /* Store.swift */,
+				6D2F1488280C20D000A3A2E5 /* SideEffectsMiddleware.swift */,
 				6D68E1AD287ABB6F00CD574A /* ScreenConfiguration */,
 				6D41B09D2879FA87007CEB2F /* MouseLocation */,
 			);
@@ -131,12 +131,12 @@
 		6DC044502801877F00281728 /* DeskPad */ = {
 			isa = PBXGroup;
 			children = (
-				6DC04460280191EB00281728 /* main.swift */,
-				6D2F1485280C20C800A3A2E5 /* SubscriberViewController.swift */,
-				6DC044512801877F00281728 /* AppDelegate.swift */,
 				6D2F1483280C201B00A3A2E5 /* Backend */,
 				6D2F1484280C202700A3A2E5 /* Frontend */,
 				6D68E1B0287ABDAB00CD574A /* Helpers */,
+				6DC04460280191EB00281728 /* main.swift */,
+				6D2F1485280C20C800A3A2E5 /* SubscriberViewController.swift */,
+				6DC044512801877F00281728 /* AppDelegate.swift */,
 				6D36BEBA2801A40600EAB869 /* DeskPad-Bridging-Header.h */,
 				6D36BEB92801A39200EAB869 /* CGVirtualDisplayPrivate.h */,
 				6DC044552801878100281728 /* Assets.xcassets */,
@@ -233,7 +233,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\" --swiftversion \"5\"\n";
+			shellScript = "#cd BuildTools\n#SDKROOT=(xcrun --sdk macosx --show-sdk-path)\n##swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n#swift run -c release swiftformat \"$SRCROOT\" --swiftversion \"5\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -387,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = TYPC962S4N;
+				DEVELOPMENT_TEAM = 5Q3XA5BN37;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -397,7 +397,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stengo.DeskPad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wrxdz.DeskPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -413,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = TYPC962S4N;
+				DEVELOPMENT_TEAM = 5Q3XA5BN37;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -423,7 +423,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stengo.DeskPad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wrxdz.DeskPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

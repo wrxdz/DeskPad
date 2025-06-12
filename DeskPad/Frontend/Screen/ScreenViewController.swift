@@ -1,5 +1,6 @@
 import Cocoa
 import ReSwift
+import CoreGraphics
 
 enum ScreenViewAction: Action {
     case setDisplayID(CGDirectDisplayID)
@@ -119,5 +120,10 @@ class ScreenViewController: SubscriberViewController<ScreenViewData>, NSWindowDe
             y: (view.frame.height - clickedPoint.y) / view.frame.height * screenResolution.height
         )
         store.dispatch(MouseLocationAction.requestMove(toPoint: onScreenPoint))
+    }
+    
+    func stopDisplayStream() {
+        stream?.stop()
+        stream = nil
     }
 }

@@ -42,4 +42,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
         return true
     }
+    
+    func applicationWillTerminate(_ notification: Notification) {
+        guard let vc = window.delegate as? ScreenViewController else { return }
+        vc.stopDisplayStream()
+    }
+    
+    
 }

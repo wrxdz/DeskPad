@@ -100,7 +100,9 @@ class ScreenViewController: SubscriberViewController<ScreenViewData>, NSWindowDe
 
     func windowWillResize(_ window: NSWindow, to frameSize: NSSize) -> NSSize {
         let snappingOffset: CGFloat = 30
-        let contentSize = window.contentRect(forFrameRect: NSRect(origin: .zero, size: frameSize)).size
+        let contentRect = window.contentRect(forFrameRect: NSRect(origin: .zero, size: frameSize))
+        let contentSize = contentRect.size
+        print("contentsize=\(contentSize), abs=\(contentSize.width - (previousResolution?.width ?? 0))")
         guard
             let screenResolution = previousResolution,
             abs(contentSize.width - screenResolution.width) < snappingOffset
